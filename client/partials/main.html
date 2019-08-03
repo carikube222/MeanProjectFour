@@ -1,0 +1,27 @@
+
+<h1>MAIN PAGE</h1>
+<a href='/#!/logout'>Bye <i class="fa fa-sign-out fa-2x" aria-hidden="true"></i></a>
+<form><a href='#!/tests/new' class='btn btn-success pull-right'>Add New Test</a></form>
+<div ng-repeat='message in messages'>
+  <p ng-bind='message'></p>
+</div>
+<h2>Striped Rows</h2>
+  <input type="text" ng-model='search' placeholder="search">
+<form><a href='#!/tests' class='btn btn-success pull-right'>Take Test!</a></form>
+<p style='color:red;' ng-bind='hasErrors'></p>
+<table class="table table-striped">
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Score</th>
+    <th>Percentage</th>
+  </tr>
+</thead>
+<tbody>
+  <tr ng-repeat='user in users | orderBy: "-createdAt" | filter: search'>
+    <td ng-bind='user.name'></td>
+		<td ng-bind='user.score'></td>
+		<td ng-bind='user.percentage'></td>
+  </tr>
+</tbody>
+</table>

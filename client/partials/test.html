@@ -1,0 +1,30 @@
+<h4>Form control: checkbox</h4>
+<div ng-repeat='message in messages'>
+  <p ng-bind='message'></p>
+</div>
+  <p>The form below contains three checkboxes. The last option is disabled:</p>
+  <form ng-submit="game()">
+    <div class="form-group">
+      <label><h4 ng-bind= "questions[0].question"></h4></label>
+      <input type="radio" name="test" ng-model="radioValue.one" value="{{questions[0].answer}}">{{questions[0].answer}}
+      <input type="radio" name="test" ng-model="radioValue.one" value="{{questions[0].fakeone}}">{{questions[0].fakeone}}
+      <input type="radio" name="test" ng-model="radioValue.one" value="{{questions[0].faketwo}}">{{questions[0].faketwo}}</div>
+    </div>
+    <div class="form-group">
+    <label><h4 ng-bind= "questions[1].question"></h4></label>
+      <input type="radio" name="test" ng-model="radioValue.two" value="{{questions[1].answer}}">{{questions[1].answer}}
+      <input type="radio" name="test" ng-model="radioValue.two" value="{{questions[1].fakeone}}">{{questions[1].fakeone}}
+      <input type="radio" name="test" ng-model="radioValue.two" value="{{questions[1].faketwo}}">{{questions[1].faketwo}}
+    </div>
+    <div class="form-group">
+    <label><h4 ng-bind= "questions[2].question"></h4></label>
+      <input type="radio" name="test" ng-model="radioValue.three" value="{{questions[2].answer}}">{{questions[2].answer}}
+      <input type="radio" name="test" ng-model="radioValue.three" value="{{questions[2].fakeone}}">{{questions[2].fakeone}}
+      <input type="radio" name="test" ng-model="radioValue.three" value="{{questions[2].faketwo}}">{{questions[2].faketwo}}
+    </div>
+    <pre><div>currently selected: {{radioValue}}</div></pre>
+
+    <button class="btn btn-lg btn-success" type="submit"><i class="fa fa-rocket fa-lg" aria-hidden="true"></i></button>
+  </form>
+
+<!-- ng-disabled='form.$invalid' -->
